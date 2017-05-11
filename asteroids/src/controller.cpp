@@ -13,7 +13,6 @@
 #include "model.h"
 #include "asteroids.h"
 #include "view.h"
-#include "node.h"
 #include "utils.h"
 
 /* Joystick 5-way switch
