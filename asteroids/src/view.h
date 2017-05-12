@@ -1,3 +1,8 @@
+
+//Joshua Higgins - W15016306
+//Connor Moore - W15012760
+
+
 void init_DBuffer(void);
 void swap_DBuffer(void);
 void draw(void);

@@ -1,3 +1,8 @@
+
+//Joshua Higgins - W15016306
+//Connor Moore - W15012760
+
+
 /* Game state */
 
 extern int   score, lives;

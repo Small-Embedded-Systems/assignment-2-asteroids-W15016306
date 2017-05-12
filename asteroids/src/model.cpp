@@ -1,3 +1,8 @@
+
+//Joshua Higgins - W15016306
+//Connor Moore - W15012760
+
+
 /* Asteroids model */
 #include <stdbool.h>
 #include <stdint.h>
@@ -14,20 +19,20 @@
 static const int heapsize = 25;
 static node_t heap[heapsize];
 static node_t *freenodes;
-int n = 0;
-float shot0[4] = {3000,3000,0,0},
+static int n = 0;
+static float shot0[4] = {3000,3000,0,0},
 shot1[4] = {3000,3000,0,0}, 
 shot2[4] = {3000,3000,0,0}, 
 shot3[4] = {3000,3000,0,0}, 
 shot4[4] = {3000,3000,0,0};
-bool collision = false;
-int hits = 15;
-int newPosX, newPosY;
-int asteroidCount, totalAsteroids, destroyedAsteroids;
-int fired, firedCount;
-bool asteroidSplitMode = false;
+static bool collision = false;
+static int hits = 15;
+static int newPosX, newPosY;
+static int asteroidCount, totalAsteroids, destroyedAsteroids;
+static int fired, firedCount;
+static bool asteroidSplitMode = false;
 double x1, y1, x2, y2, x3, y3;
-double 	acceleration = 0.0;
+static double 	acceleration = 0.0;
 float 	bulletAcceleration = 4;
 float 	newHeading,	currentHeading;
 
@@ -309,8 +314,7 @@ void update(struct particle *l)
 
 			//shield collision detection
 			if(!shield && ((player.p.x >= l->x-30)&&(player.p.x <= l->x+30)) && ((player.p.y >= l->y-30)&&(player.p.y <= l->y+30)))
-			{
-				
+			{				
 				lives--;
 				shield = true;
 				player.p.x = 240;

@@ -1,3 +1,8 @@
+
+//Joshua Higgins - W15016306
+//Connor Moore - W15012760
+
+
 /* Asteroids Model */
 struct point {
     float x,y;

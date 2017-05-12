@@ -1,5 +1,9 @@
-/* Asteroids view
-*/
+
+//Joshua Higgins - W15016306
+//Connor Moore - W15012760
+
+
+/* Asteroids view*/
 
 /* C libraries */
 #include <stdlib.h>
@@ -19,9 +23,9 @@
 
 Display *graphics = Display::theDisplay();
 ship ship;
-const colour_t background = rgb(0,51,102); /* Midnight Blue */
+static const colour_t background = rgb(0,51,102); /* Midnight Blue */
 
-int flash = 0; 
+static int flash = 0; 
 bool end = false;
 bool win = false;
 bool load = false;
@@ -157,34 +161,37 @@ void drawScore(void)
 	graphics->printf("Score:");
 	graphics->setCursor(5,15);
 	graphics->setTextSize(2);
+	graphics->setTextColor(WHITE);
 	graphics->printf("%d",score);
 	graphics->drawLine(55, 0, 55, 270, WHITE);
+	graphics->setTextSize(1);
+	graphics->setCursor(5,40);
+	graphics->printf("Lives:");
 	
 	
 	// draws lives indicator
 	if(lives >= 1){
-		graphics->drawTriangle(5,50,11,50,8,40,WHITE); 
+		graphics->drawTriangle(5,60,11,60,8,50,WHITE); 
 	}
 	if(lives >= 2){
-		graphics->drawTriangle(14,50,20,50,17,40,WHITE); 
+		graphics->drawTriangle(14,60,20,60,17,50,WHITE); 
 	}
 	if(lives >= 3){
-		graphics->drawTriangle(23,50,29,50,26,40,WHITE); 
+		graphics->drawTriangle(23,60,29,60,26,50,WHITE); 
 	}
 	if(lives >= 4){
-		graphics->drawTriangle(32,50,38,50,35,40,WHITE); 
+		graphics->drawTriangle(32,60,38,60,35,50,WHITE); 
 	}
 	if(lives == 5){
-		graphics->drawTriangle(40,50,46,50,43,40,WHITE); 
+		graphics->drawTriangle(40,60,46,60,43,50,WHITE); 
 	}
 	
 	//Draws Shield Health
-	graphics->setCursor(5,60);
-	graphics->setTextSize(1);
-	graphics->printf("Shield");
 	graphics->setCursor(5,70);
-	graphics->printf("Health:");
+	graphics->printf("Shield");
 	graphics->setCursor(5,80);
+	graphics->printf("Health:");
+	graphics->setCursor(5,90);
 	graphics->printf("%d",damage);
 	graphics->setCursor(5,90);
 }

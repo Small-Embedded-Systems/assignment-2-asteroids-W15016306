@@ -1,3 +1,8 @@
+
+//Joshua Higgins - W15016306
+//Connor Moore - W15012760
+
+
 float norm(float value, float min, float max);
 float lerp(float min, float max, float value);
 float map(float value, float lower, float upper, float min, float max);
