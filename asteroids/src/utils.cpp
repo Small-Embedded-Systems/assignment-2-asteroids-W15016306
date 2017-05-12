@@ -40,7 +40,7 @@ void toggleShield(void)
 	if(shield)
 	{
 		shield = false;
-		damage = 150;
+		damage = 100;
 		randInterval = randrange(0,10);
 	}
 	else 

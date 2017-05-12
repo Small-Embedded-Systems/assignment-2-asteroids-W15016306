@@ -494,7 +494,7 @@ void update(struct particle *l)
 			lives --;
 			player.p.x = 240;
 			player.p.y = 136;
-			damage = 150;
+			damage = 100;
 			shield = true;
 			
 		}
